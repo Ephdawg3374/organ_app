@@ -1,0 +1,61 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body, button, div, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+
+  background: transparent;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  width: 800px;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: lighter;
+  margin: auto;
+}
+
+#content {
+  margin: 100px auto;
+  position: relative;
+}
+
+.organ {
+  position: absolute;
+  left: 25%;
+}
+
+.key {
+  border-width: 2px;
+  border-style: outset;
+  padding: 10px;
+}
+
+.key.pressed {
+  border-style: inset;
+}
+
+.recorder {
+  font-size: 12px;
+  margin: 10px 5px 0px 5px;
+}
+
+.recorder > button {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
