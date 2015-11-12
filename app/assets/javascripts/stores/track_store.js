@@ -24,21 +24,17 @@
     });
   };
 
-  TrackStore.create = function (trackName, trackRoll) {
-    var trackAttributes =
-      {
-        track_attributes:
-        {
-          name: trackName,
-          roll: trackRoll
-        }
-      };
+  TrackStore.create = function (track) {
+    var trackAttr = {
+      name: track.attributes.name,
+      roll: track.roll
+    };
 
     $.ajax({
       url: "/tracks/",
       type: "POST",
       dataType: "json",
-      data: {track: trackAttributes},
+      data: {track: trackAttr},
       success: function (data) {
         _tracks.push(data);
         TrackStore.changed();

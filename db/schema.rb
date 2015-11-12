@@ -14,9 +14,10 @@
 ActiveRecord::Schema.define(version: 20151111222030) do
 
   create_table "tracks", force: :cascade do |t|
-    t.text     "track_attributes"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "name"
+    t.text     "roll"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

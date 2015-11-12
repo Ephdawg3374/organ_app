@@ -1,7 +1,7 @@
 class Track < ActiveRecord::Base
-  validates :attributes, presence: true
+  validates :name, :roll, presence: true
 
-  serialize :attributes, JSON
+  serialize :roll, JSON
 
   # store :track_attributes, accessors: [ :name, :roll ], coder: JSON
 end

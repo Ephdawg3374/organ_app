@@ -9,6 +9,10 @@ class TracksController < ApplicationController
   end
 
   def create
+    # stuff = {
+    #   name: params[:track][:name],
+    #   roll: params[:track][:roll]
+    # }
     @new_track = Track.new(track_params)
 
     if @new_track.save
@@ -45,7 +49,7 @@ class TracksController < ApplicationController
   private
 
   def track_params
-    params.require(:track).permit(:track_attributes)
+    params.require(:track).permit(:name, roll: [ :timeSlice, notes: [] ] )
   end
 
 end

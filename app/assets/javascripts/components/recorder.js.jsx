@@ -33,10 +33,8 @@ var Recorder = React.createClass({
   },
 
   createTrack: function () {
-    TrackStore.create(
-      this.state.track.attributes.name,
-      this.state.track.roll
-    );
+    // debugger;
+    TrackStore.create(this.state.track);
   },
 
   render: function () {
@@ -49,7 +47,7 @@ var Recorder = React.createClass({
         <button onClick={track.play.bind(track)}>Play Track!</button>
         <button onClick={this.createTrack}>Save Track</button>
       </div>
-    )
+    );
   }
 
 
